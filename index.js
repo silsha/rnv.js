@@ -12,6 +12,15 @@ var rnv = function () {
         });
     }
 
+    this.ticker = function (callback) {
+        var data = {};
+        data.path = 'ticker/'
+        getResult(data, function(res){
+            callback(res);
+        })
+
+    }
+
     this.tickerCount = function (callback) {
         var data = {};
         data.path = 'ticker/numberOfNewEntries/0'
