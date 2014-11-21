@@ -1,4 +1,5 @@
 var request     = require('request');
+var querystring = require('querystring');
 
 var apiurl      = 'http://rnv.the-agent-factory.de:8080/easygo2/rest/regions/rnv/modules/';
 
@@ -49,7 +50,11 @@ var rnv = function () {
     }
 
     function getResult (data, callback) {
-        request.get(apiurl+data.path, function (err, res, body) {
+        var query = "";
+        if(data.query)
+            query = "?" + querystring.stringify(data.query);
+
+        request.get(apiurl + data.path + query, function (err, res, body) {
             callback(body);
         });
     }
