@@ -8,6 +8,65 @@ Installation
 
 `npm install rnv.js`
 
+Usage
+-----
+
+```
+var rnv = require('rnv.js');
+var api = new rnv();
+
+// get station list
+api.stations(function(res){
+	console.log(res);
+});
+
+// query station data
+var stationmonitorquery = {
+	"hafasID": "116",
+	"transportFilter": "4",
+	"time": "null"
+}
+
+api.stationmonitor(stationmonitorquery, function(res){
+	console.log(res);
+});
+
+// query line data
+var linesquery = {
+	"hafasID": "116",
+	"lineID": "4",
+	"stopIndex": "0",
+	"tourType": "452",
+	"tourID": "7,38665",
+	"time": "03:03"
+}
+
+api.lines(linesquery, function(res){
+	console.log(res);
+});
+
+// get ticker entries
+api.ticker(function(res){
+	console.log(res);
+});
+
+// get number of ticker entries
+api.tickerCount(function(res){
+	console.log(res);
+});
+
+// get news entries
+api.news(function(res){
+	console.log(res);
+});
+
+// get number of news entries
+api.newsCount(function(res){
+	console.log(res);
+});
+
+```
+
 License
 -------
 

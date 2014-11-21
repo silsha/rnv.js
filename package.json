@@ -1,6 +1,6 @@
 {
   "name": "rnv.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Request Rhein-Neckar-Verkehr (RNV) travel data with node.js.",
   "main": "index.js",
   "dependencies": {
