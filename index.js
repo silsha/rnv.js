@@ -13,6 +13,15 @@ var rnv = function () {
         });
     }
 
+    this.stationmonitor = function(query, callback) {
+        var data = {};
+        data.query = query;
+        data.path = "stationmonitor/element";
+        getResult(data, function(res){
+            callback(res);
+        })
+    }
+
     this.ticker = function (callback) {
         var data = {};
         data.path = 'ticker/'
@@ -53,7 +62,7 @@ var rnv = function () {
         var query = "";
         if(data.query)
             query = "?" + querystring.stringify(data.query);
-
+        
         request.get(apiurl + data.path + query, function (err, res, body) {
             callback(body);
         });
