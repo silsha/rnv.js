@@ -3,6 +3,10 @@ rnv.js
 
 Request Rhein-Neckar-Verbund (RNV) travel data with node.js.
 
+Installation
+------------
+
+`npm install rnv.js`
 
 License
 -------
