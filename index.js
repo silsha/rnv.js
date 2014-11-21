@@ -73,7 +73,7 @@ var rnv = function () {
             query = "?" + querystring.stringify(data.query);
 
         request.get(apiurl + data.path + query, function (err, res, body) {
-            callback(body);
+            callback(JSON.parse(body));
         });
     }
 }
