@@ -22,6 +22,15 @@ var rnv = function () {
         })
     }
 
+    this.lines = function(query, callback) {
+        var data = {};
+        data.query = query;
+        data.path = "lines";
+        getResult(data, function(res){
+            callback(res);
+        })
+    }
+
     this.ticker = function (callback) {
         var data = {};
         data.path = 'ticker/'
@@ -62,7 +71,7 @@ var rnv = function () {
         var query = "";
         if(data.query)
             query = "?" + querystring.stringify(data.query);
-        
+        console.log(apiurl + data.path + query)
         request.get(apiurl + data.path + query, function (err, res, body) {
             callback(body);
         });
