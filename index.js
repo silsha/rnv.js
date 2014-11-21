@@ -30,6 +30,15 @@ var rnv = function () {
 
     }
 
+    this.news = function (callback) {
+        var data = {};
+        data.path = 'news/'
+        getResult(data, function(res){
+            callback(res);
+        })
+
+    }
+
     this.newsCount = function (callback) {
         var data = {};
         data.path = 'news/numberOfNewEntries/0'
