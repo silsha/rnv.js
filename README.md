@@ -1,7 +1,7 @@
 rnv.js
 ======
 
-Request Rhein-Neckar-Verbund (RNV) travel data with node.js.
+Request Rhein-Neckar-Verkehr (RNV) travel data with node.js.
 
 Installation
 ------------
