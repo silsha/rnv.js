@@ -71,7 +71,7 @@ var rnv = function () {
         var query = "";
         if(data.query)
             query = "?" + querystring.stringify(data.query);
-        console.log(apiurl + data.path + query)
+        
         request.get(apiurl + data.path + query, function (err, res, body) {
             callback(body);
         });
