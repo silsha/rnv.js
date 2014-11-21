@@ -21,6 +21,15 @@ var rnv = function () {
 
     }
 
+    this.newsCount = function (callback) {
+        var data = {};
+        data.path = 'news/numberOfNewEntries/0'
+        getResult(data, function(res){
+            callback(res);
+        })
+
+    }
+
     function getResult (data, callback) {
         request.get(apiurl+data.path, function (err, res, body) {
             callback(body);
