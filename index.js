@@ -13,7 +13,7 @@ var rnv = function () {
         });
     }
 
-    this.stationmonitor = function(query, callback) {
+    this.stationmonitor = function (query, callback) {
         var data = {};
         data.query = query;
         data.path = "stationmonitor/element";
@@ -22,7 +22,7 @@ var rnv = function () {
         })
     }
 
-    this.lines = function(query, callback) {
+    this.lines = function (query, callback) {
         var data = {};
         data.query = query;
         data.path = "lines";
@@ -71,7 +71,7 @@ var rnv = function () {
         var query = "";
         if(data.query)
             query = "?" + querystring.stringify(data.query);
-        
+
         request.get(apiurl + data.path + query, function (err, res, body) {
             callback(body);
         });
